@@ -1,0 +1,32 @@
+Function Main(title)
+   dim a, i
+   i = 5
+   a = "aa2a" & "XA"
+   msgbox("The Letter '" & mid("aa2a" & "XA",i,1) & "' is in position number " & asc(chr(i)) & ", when using the Mid Function",16,"aa2a" & "XA")
+   a = asc(chr(mid("aa2a" & "XA",3,1)))
+   a = left(title, a)
+   msgbox("Using the left function I have come to the string that is '" & a & "' (left 2 letters) -->(look i can use parenthisis, and commas in the quotes!)",16, title & "<-- The Title is The given Argument when calling the Function Main")
+End Function
+
+Function OnLoad()
+   dim ans
+   msgbox("Script Has Been Loaded" & vbCrLf & "This is a test script created by xIso5",16,"Loaded")
+   ans = msgbox("Would you like to execute Function Main?",4,"Question")
+   if ans = 6 then
+      Main("Test System")
+   else
+      msgbox("Since you hit no i will tell you The Only Bad Part about the script is that you can't use an if inside of an if...:-(", 16, "<!-- MOOD=:-) --!>")
+   end if
+   msgbox("Exiting...  <---universal message, you will see this wether you hit yes or no, because its outside of the if statement", 16, "Script")
+   ans = msgbox("Oh, Wait Would you like to test the Math Engine?", 4, "Math Eng?")
+   if ans = 6 then
+      msgbox("2+1=" & 2+1,16,"Math Test")
+      msgbox("2+89=" & 2+89,16,"Math Test")
+      msgbox("2*4=" & 2*4,16,"Math Test")
+      msgbox("212/4=" & 212/4,16,"Math Test")
+      msgbox("233*5+4=" & 233*5+4,16,"Math Test")
+      msgbox("22+123=" & 22+123,16,"Math Test")
+      msgbox("27/21+4=" & 27/21+4,16,"Math Test")
+      msgbox("Pi=" & Pi+0,16,"Math Test")
+   end if
+end function
